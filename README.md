@@ -2,6 +2,7 @@
  ## Description
  ---
  This app allows a user to generate, save, and delete stored notes.
+ ![notetakerscreenshot](https://user-images.githubusercontent.com/113604486/198890041-6bbe1708-58d1-437c-8b63-ea7f2be07b59.png)
  ## Table of Contents
  [Installation](#installation)  
    [Usage](#usage)  
