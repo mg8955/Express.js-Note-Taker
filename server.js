@@ -2,7 +2,7 @@
 // refer to activity 20 solved for help
 const express = require('express');
 const path = require('path');
-const api = require('./routes');
+const api = require('./public/routes');
 
 const PORT = process.env.PORT || 3001;
 
@@ -20,7 +20,7 @@ app.get('/', (req, res) =>
 
 // Get request for notes
 app.get('/notes', (req, res) =>
-    res.sendFile(path.join(__dirname, './public/notes.html'))
+    res.sendFile(path.join(__dirname, 'public/notes.html'))
 );
 
 app.get('*', (req, res) =>
