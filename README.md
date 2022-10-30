@@ -15,7 +15,7 @@
  Use npm install to install dependencies.
  ## Usage
  ---
- ![Note Taker GIF](https://user-images.githubusercontent.com/113604486/198890169-30883e91-c47c-4194-8d22-f19ad1f49b07.gif)
+ ![Note Taker GIF](https://user-images.githubusercontent.com/113604486/198890169-30883e91-c47c-4194-8d22-f19ad1f49b07.gif) <br>
  To use the app, please visit the live version at [Express.js Note Taker](https://express-note-taker-mag.herokuapp.com/)
  ## License
  ---
