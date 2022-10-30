@@ -1,21 +1,7 @@
 [
     {
-        "title": "Test Title",
-        "text": "Test text"
-    },
-    {
-        "title": "0800",
-        "text": "1234",
-        "noteId": "e046ea44-de79-4e70-88ad-05ed94f23a96"
-    },
-    {
-        "title": "new note",
-        "text": "1234",
-        "noteId": "215c799e-203d-4b69-bbd1-bc58ef1ad0a4"
-    },
-    {
-        "title": "new note",
-        "text": "1234",
-        "noteId": "b07eeacf-38bb-4bae-aede-e10e6424eb13"
+        "title": "new note1",
+        "text": "12345",
+        "id": "f145156a-36eb-49d3-80a0-3b40495a37e2"
     }
 ]

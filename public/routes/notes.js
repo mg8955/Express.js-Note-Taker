@@ -1,6 +1,6 @@
 const notes = require('express').Router();
 const { v4: uuidv4 } = require('uuid');
-const { readAndAppend, readFromFile } = require('../helpers/fsUtils');
+const { readAndAppend, readFromFile, writeToFile } = require('../helpers/fsUtils');
 
 // Get route for retrieving all notes
 notes.get('/', (req, res) =>
@@ -13,7 +13,7 @@ notes.get('/:id', (req, res) => {
     readFromFile('./db/db.json')
         .then((data) => JSON.parse(data))
         .then((json) => {
-            const result = json.filter((note) => note.id !== noteId);
+            const result = json.filter((note) => note.id === noteId);
             return result.length > 0
             ? res.json(result)
             : res.json('Note not found');
@@ -45,13 +45,16 @@ notes.post('/', (req, res) => {
 });
 
 notes.delete(`/:id`, (req, res) => {
-    const noteDelete = req.params.id;
-  
-    db = db.filter((note) => note.id != noteDelete )
-    
-    writeToFile('./db/db.json', db)
-    res.json('Your note was deleted!');
-  
-  })
+    const noteId = req.params.id;
+    readFromFile('./db/db.json')
+    .then((data) => JSON.parse(data))
+    .then((json) => {
+        const result = json.filter((note) => note.id !== noteId)
+
+        writeToFile('./db/db.json', result);
+
+        res.json(`Note ${noteId} has been deleted!`);
+    });
+  });
 
 module.exports = notes;
