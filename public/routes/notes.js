@@ -44,6 +44,7 @@ notes.post('/', (req, res) => {
     }
 });
 
+// DELETE route for deleting saved notes
 notes.delete(`/:id`, (req, res) => {
     const noteId = req.params.id;
     readFromFile('./db/db.json')
